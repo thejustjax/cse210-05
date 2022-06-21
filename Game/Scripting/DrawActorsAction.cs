@@ -29,7 +29,7 @@ namespace Unit05_cycle.Game.Scripting
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
             List<Actor> segments2 = cycletwo.GetSegments();
             Actor score = cast.GetFirstActor("score");
-            Actor food = cast.GetFirstActor("food");
+            //Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();
