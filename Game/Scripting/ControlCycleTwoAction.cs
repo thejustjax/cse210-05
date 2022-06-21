@@ -51,7 +51,7 @@ namespace Unit05_cycle.Game.Scripting
             }
 
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            CycleTwo.TurnHead(direction);
+            cycletwo.TurnHead(direction);
 
         }
     }
