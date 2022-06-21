@@ -50,8 +50,8 @@ namespace Unit05_cycle.Game.Scripting
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
-            CycleOne.TurnHead(direction);
+            CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
+            CycleTwo.TurnHead(direction);
 
         }
     }
