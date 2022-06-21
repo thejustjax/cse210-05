@@ -44,7 +44,7 @@ namespace Unit05_cycle.Game.Scripting
         {
             Snake snake = (Snake)cast.GetFirstActor("snake");
             Score score = (Score)cast.GetFirstActor("score");
-            Food food = (Food)cast.GetFirstActor("food");
+
             
             if (snake.GetHead().GetPosition().Equals(food.GetPosition()))
             {
@@ -72,6 +72,10 @@ namespace Unit05_cycle.Game.Scripting
                     isGameOver = true;
                 }
             }
+
+
+
+
         }
 
         private void HandleGameOver(Cast cast)
