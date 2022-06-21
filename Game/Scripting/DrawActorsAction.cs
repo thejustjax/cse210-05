@@ -27,16 +27,16 @@ namespace Unit05_cycle.Game.Scripting
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             List<Actor> segments1 = cycleone.GetSegments();
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            List<Actor> segments2 = cycleone.GetSegments();
+            List<Actor> segments2 = cycletwo.GetSegments();
             Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();
             videoService.DrawActors(segments1);
-            videoService.DrawActors(segments1);
+            videoService.DrawActors(segments2);
             videoService.DrawActor(score);
-            videoService.DrawActor(food);
+            //videoService.DrawActor(food);
             videoService.DrawActors(messages);
             videoService.FlushBuffer();
         }
