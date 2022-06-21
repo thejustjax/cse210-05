@@ -64,12 +64,12 @@ namespace Unit05_cycle.Game.Scripting
             //Snake snake = (Snake)cast.GetFirstActor("snake");
             //Actor head = snake.GetHead();
             //List<Actor> body = snake.GetBody();
-            CycleOne snake1 = (CycleOne)cast.GetFirstActor("snake1");
-            Actor head1 = snake1.GetHead();
-            List<Actor> body1 = snake1.GetBody();
-            CycleTwo snake2 = (CycleTwo)cast.GetFirstActor("snake2");
-            Actor head2 = snake2.GetHead();
-            List<Actor> body2 = snake2.GetBody();
+            CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
+            Actor head1 = cycleone.GetHead();
+            List<Actor> body1 = cycleone.GetBody();
+            CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
+            Actor head2 = cycletwo.GetHead();
+            List<Actor> body2 = cycletwo.GetBody();
 
             foreach (Actor segment1 in body1)
             {
