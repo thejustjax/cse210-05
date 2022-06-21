@@ -9,7 +9,7 @@ namespace Unit05_cycle.Game.Casting
     /// The responsibility of Food is to select a random position and points that it's worth.
     /// </para>
     /// </summary>
-    public class Food : Actor
+    public class Cycle_Two : Actor
     {
         private int points = 0;
 
