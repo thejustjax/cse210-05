@@ -107,7 +107,7 @@ namespace Unit05_cycle.Game.Scripting
                 Point position = new Point(x, y);
 
                 Actor message = new Actor();
-                message.SetText("Game Over!");
+                message.SetText("You Suck!");
                 message.SetPosition(position);
                 cast.AddActor("messages", message);
 
@@ -119,6 +119,5 @@ namespace Unit05_cycle.Game.Scripting
                 food.SetColor(Constants.WHITE);
             }
         }
-
     }
 }
