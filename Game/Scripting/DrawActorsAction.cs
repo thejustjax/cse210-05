@@ -26,7 +26,7 @@ namespace Unit05_cycle.Game.Scripting
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             List<Actor> segments1 = cycleone.GetSegments();
-            CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycleone");
+            CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
             List<Actor> segments2 = cycleone.GetSegments();
             Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
