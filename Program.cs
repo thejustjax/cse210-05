@@ -29,7 +29,8 @@ namespace Unit05_cycle
            
             // create the script
             Script script = new Script();
-            script.AddAction("input", new ControlActorsAction(keyboardService));
+            script.AddAction("input", new ControlCycleOneAction(keyboardService));
+            script.AddAction("input", new ControlCycleTwoAction(keyboardService));
             script.AddAction("update", new MoveActorsAction());
             script.AddAction("update", new HandleCollisionsAction());
             script.AddAction("output", new DrawActorsAction(videoService));
