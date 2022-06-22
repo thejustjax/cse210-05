@@ -72,7 +72,20 @@ namespace Unit05_cycle.Game.Scripting
                     {
                         isGameOver = true;   
                     }
+
+                    else if(segment2.GetPosition().Equals(head2.GetPosition()))
+                    {
+
+                    }
+
+                if (segment1.GetPosition().Equals(head1.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+
             }
+
+            
 
         
 
