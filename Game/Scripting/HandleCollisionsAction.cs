@@ -54,22 +54,6 @@ namespace Unit05_cycle.Game.Scripting
             }
 
         }
-=======
-        //private void HandleFoodCollisions(Cast cast)
-        //{
-        //    Snake snake = (Snake)cast.GetFirstActor("snake");
-       //     Score score = (Score)cast.GetFirstActor("score");
-
-            
-        //    if (snake.GetHead().GetPosition().Equals(food.GetPosition()))
-        //    {
-        //        int points = food.GetPoints();
-        //        snake.GrowTail(points);
-        //        score.AddPoints(points);
-        //        food.Reset();
-        //    }
-        //}
->>>>>>> f9475fac375222a965a9baae774debb1eb765f6d
 
         /// <summary>
         /// Sets the game over flag if the snake collides with one of its segments.
