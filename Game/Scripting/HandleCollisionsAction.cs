@@ -17,7 +17,7 @@ namespace Unit05_cycle.Game.Scripting
     public class HandleCollisionsAction : Action
     {
         private bool isGameOver = false;
-
+        private int counter = 0;
         /// <summary>
         /// Constructs a new instance of HandleCollisionsAction.
         /// </summary>
@@ -44,8 +44,14 @@ namespace Unit05_cycle.Game.Scripting
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            cycleone.GrowTail(1/15);
-            cycletwo.GrowTail(1/15);
+            Score score = (Score)cast.GetFirstActor("score");
+            counter = counter +1;
+            if (counter % 15 == 0){
+                cycleone.GrowTail(1);
+                cycletwo.GrowTail(1);
+                score.AddPoints(1);
+            }
+
         }
 
         /// <summary>
