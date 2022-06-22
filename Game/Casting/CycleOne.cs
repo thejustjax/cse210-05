@@ -100,8 +100,8 @@ namespace Unit05_cycle.Game.Casting
         /// </summary>
         private void PrepareBody()
         {
-            int x = Constants.MAX_X / (3);
-            int y = Constants.MAX_Y / (3);
+            int x = Constants.MAX_X / (2);
+            int y = Constants.MAX_Y / (2);
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
