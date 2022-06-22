@@ -17,9 +17,6 @@ namespace Unit05_cycle.Game.Scripting
     public class HandleCollisionsAction : Action
     {
         private bool isGameOver = false;
-
-        private bool CycleOneLoose = false;
-        private bool CycleTwoLoose = false;
         private int counter = 0;
         /// <summary>
         /// Constructs a new instance of HandleCollisionsAction.
@@ -40,21 +37,19 @@ namespace Unit05_cycle.Game.Scripting
         }
 
         /// <summary>
-        /// Updates the score and snake size. 
+        /// Updates the score nd moves the food if the snake collides with it.
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleGrowth(Cast cast)
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            Score onescore = (Score)cast.GetFirstActor("onescore");
-            Score twoscore = (Score)cast.GetFirstActor("twoscore");
+            OneScore onescore = (OneScore)cast.GetFirstActor("onescore");
             counter = counter +1;
             if (counter % 15 == 0){
                 cycleone.GrowTail(1);
                 cycletwo.GrowTail(1);
                 onescore.AddPoints(1);
-                twoscore.AddPoints(1);
             }
 
         }
@@ -65,6 +60,9 @@ namespace Unit05_cycle.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
+            //Snake snake = (Snake)cast.GetFirstActor("snake");
+            //Actor head = snake.GetHead();
+            //List<Actor> body = snake.GetBody();
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             Actor head1 = cycleone.GetHead();
             List<Actor> body1 = cycleone.GetBody();
@@ -78,24 +76,20 @@ namespace Unit05_cycle.Game.Scripting
                     if (segment1.GetPosition().Equals(head2.GetPosition()))
                     {
                         isGameOver = true;
-                        CycleTwoLoose = true;
                     }
                     else if(segment2.GetPosition().Equals(head1.GetPosition()))
                     {
-                        isGameOver = true; 
-                        CycleOneLoose = true;  
+                        isGameOver = true;   
                     }
 
                     else if(segment2.GetPosition().Equals(head2.GetPosition()))
                     {
                         isGameOver = true;
-                        CycleTwoLoose = true;
                     }
 
                 if (segment1.GetPosition().Equals(head1.GetPosition()))
                 {
                     isGameOver = true;
-                    CycleOneLoose = true;
                 }
 
             }
@@ -126,21 +120,15 @@ namespace Unit05_cycle.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // make everything white
-                if (CycleOneLoose == true)
+                foreach (Actor segment in segments1)
                 {
-                    foreach (Actor segment in segments1)
-                    {
-                        segment.SetColor(Constants.WHITE);
-                    }
+                    segment.SetColor(Constants.WHITE);
                 }
-                if(CycleTwoLoose == true)
+                foreach (Actor segment in segments2)
                 {
-                    foreach (Actor segment in segments2)
-                    {
-                        segment.SetColor(Constants.WHITE);
-                    }
+                    segment.SetColor(Constants.WHITE);
+                }
                 //food.SetColor(Constants.WHITE);
-                }
             }
         }
     }
