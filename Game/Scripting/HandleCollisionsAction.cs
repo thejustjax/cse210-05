@@ -37,7 +37,7 @@ namespace Unit05_cycle.Game.Scripting
         }
 
         /// <summary>
-        /// Updates the score nd moves the food if the snake collides with it.
+        /// Updates the score and snake size. 
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleGrowth(Cast cast)
@@ -60,9 +60,6 @@ namespace Unit05_cycle.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            //Snake snake = (Snake)cast.GetFirstActor("snake");
-            //Actor head = snake.GetHead();
-            //List<Actor> body = snake.GetBody();
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             Actor head1 = cycleone.GetHead();
             List<Actor> body1 = cycleone.GetBody();
