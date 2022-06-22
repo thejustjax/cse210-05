@@ -12,7 +12,7 @@ namespace Unit05_cycle.Game.Casting{
         /// </summary>
         public TwoScore()
         {
-            AddPoints(0);
+            AddPointsTwo(0);
         }
 
         /// <summary>
