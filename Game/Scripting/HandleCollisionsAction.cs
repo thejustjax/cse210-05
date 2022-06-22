@@ -44,12 +44,12 @@ namespace Unit05_cycle.Game.Scripting
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            Score score = (Score)cast.GetFirstActor("score");
+            Score onescore = (Score)cast.GetFirstActor("onescore");
             counter = counter +1;
             if (counter % 15 == 0){
                 cycleone.GrowTail(1);
                 cycletwo.GrowTail(1);
-                score.AddPoints(1);
+                onescore.AddPoints(1);
             }
 
         }
