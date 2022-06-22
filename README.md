@@ -31,3 +31,4 @@ root                    (project root folder)
 
 ## Authors
 * Cayden Lords the Incredible Genius (lor20002@byui.edu)
+* Brennon Laney (lan18022@byui.edu)
