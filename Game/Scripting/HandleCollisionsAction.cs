@@ -40,19 +40,21 @@ namespace Unit05_cycle.Game.Scripting
         }
 
         /// <summary>
-        /// Updates the score nd moves the food if the snake collides with it.
+        /// Updates the score and snake size. 
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleGrowth(Cast cast)
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            Score score = (Score)cast.GetFirstActor("score");
+            Score onescore = (Score)cast.GetFirstActor("onescore");
+            Score twoscore = (Score)cast.GetFirstActor("twoscore");
             counter = counter +1;
             if (counter % 15 == 0){
                 cycleone.GrowTail(1);
                 cycletwo.GrowTail(1);
-                score.AddPoints(1);
+                onescore.AddPoints(1);
+                twoscore.AddPoints(1);
             }
 
         }
@@ -63,9 +65,6 @@ namespace Unit05_cycle.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            //Snake snake = (Snake)cast.GetFirstActor("snake");
-            //Actor head = snake.GetHead();
-            //List<Actor> body = snake.GetBody();
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             Actor head1 = cycleone.GetHead();
             List<Actor> body1 = cycleone.GetBody();
