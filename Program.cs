@@ -23,6 +23,7 @@ namespace Unit05_cycle
             cast.AddActor("cycleone", new CycleOne());
             cast.AddActor("onescore", new OneScore());
             cast.AddActor("twoscore", new TwoScore());
+            
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
