@@ -10,8 +10,8 @@ namespace Unit05_cycle.Game.Scripting
     /// <summary>
     /// <para>An update action that handles interactions between the actors.</para>
     /// <para>
-    /// The responsibility of HandleCollisionsAction is to handle the situation when the snake 
-    /// collides with the food, or the snake collides with its segments, or the game is over.
+    /// The responsibility of HandleCollisionsAction is to handle the situation when the bikes' light ribbons grow,
+    /// or the bikes collide with each other, or the game is over.
     /// </para>
     /// </summary>
     public class HandleCollisionsAction : Action
@@ -39,7 +39,7 @@ namespace Unit05_cycle.Game.Scripting
         }
 
         /// <summary>
-        /// Updates the score nd moves the food if the snake collides with it.
+        /// Updates the score and size of the bikes' light ribbons. 
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleGrowth(Cast cast)
@@ -59,14 +59,11 @@ namespace Unit05_cycle.Game.Scripting
         }
 
         /// <summary>
-        /// Sets the game over flag if the snake collides with one of its segments.
+        /// Sets the game over flag if the bikes collide.
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            //Snake snake = (Snake)cast.GetFirstActor("snake");
-            //Actor head = snake.GetHead();
-            //List<Actor> body = snake.GetBody();
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             Actor head1 = cycleone.GetHead();
             List<Actor> body1 = cycleone.GetBody();
@@ -142,7 +139,7 @@ namespace Unit05_cycle.Game.Scripting
                         segment.SetColor(Constants.WHITE);
                     }
                 }
-                //food.SetColor(Constants.WHITE);
+            
             }
         }
     }

@@ -3,12 +3,18 @@ using System;
 
 namespace Unit05_cycle.Game.Casting{
 
+    /// <summary>
+    /// <para>The score of player Two.</para>
+    /// <para>
+    /// The responsibility of TwoScore is to keep track of Player two's score.
+    /// </para>
+    /// </summary>
     public class TwoScore : Actor
     {
         private int points = 0;
 
         /// <summary>
-        /// Constructs a new instance of an Food.
+        /// Constructs a new instance of an TwoScore.
         /// </summary>
         public TwoScore()
         {

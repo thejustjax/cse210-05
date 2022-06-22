@@ -5,15 +5,15 @@ using System.Linq;
 namespace Unit05_cycle.Game.Casting
 {
     /// <summary>
-    /// <para>A long limbless reptile.</para>
-    /// <para>The responsibility of Snake is to move itself.</para>
+    /// <para>Player one's motorcycle with light ribbons trailing behind it.</para>
+    /// <para>The responsibility of CycleOne is to move itself.</para>
     /// </summary>
     public class CycleOne : Actor
     {
         private List<Actor> segments = new List<Actor>();
 
         /// <summary>
-        /// Constructs a new instance of a Snake.
+        /// Constructs a new instance of player one's bike. 
         /// </summary>
         public CycleOne()
         {
@@ -21,34 +21,34 @@ namespace Unit05_cycle.Game.Casting
         }
 
         /// <summary>
-        /// Gets the snake's body segments.
+        /// Gets the bike's light ribbon segments.
         /// </summary>
-        /// <returns>The body segments in a List.</returns>
+        /// <returns>The light ribbon segments in a List.</returns>
         public List<Actor> GetBody()
         {
             return new List<Actor>(segments.Skip(1).ToArray());
         }
 
         /// <summary>
-        /// Gets the snake's head segment.
+        /// Gets the bike segment.
         /// </summary>
-        /// <returns>The head segment as an instance of Actor.</returns>
+        /// <returns>The bike segment as an instance of Actor.</returns>
         public Actor GetHead()
         {
             return segments[0];
         }
 
         /// <summary>
-        /// Gets the snake's segments (including the head).
+        /// Gets the bike's segments (including the bike).
         /// </summary>
-        /// <returns>A list of snake segments as instances of Actors.</returns>
+        /// <returns>A list of bike segments as instances of Actors.</returns>
         public List<Actor> GetSegments()
         {
             return segments;
         }
 
         /// <summary>
-        /// Grows the snake's tail by the given number of segments.
+        /// Grows the bike's light ribbons by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
         public void GrowTail(int numberOfSegments)
@@ -87,7 +87,7 @@ namespace Unit05_cycle.Game.Casting
         }
 
         /// <summary>
-        /// Turns the head of the snake in the given direction.
+        /// Turns the bike in the given direction.
         /// </summary>
         /// <param name="velocity">The given direction.</param>
         public void TurnHead(Point direction)
@@ -96,7 +96,7 @@ namespace Unit05_cycle.Game.Casting
         }
 
         /// <summary>
-        /// Prepares the snake body for moving.
+        /// Prepares the bike body for moving.
         /// </summary>
         private void PrepareBody()
         {

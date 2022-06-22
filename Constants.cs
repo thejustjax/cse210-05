@@ -5,9 +5,9 @@ using Unit05_cycle.Game.Casting;
 namespace Unit05_cycle.Game
 {
     /// <summary>
-    /// <para>A tasty item that snakes like to eat.</para>
+    /// <para>The settings for the game</para>
     /// <para>
-    /// The responsibility of Food is to select a random position and points that it's worth.
+    /// The responsibility of Constants is to keep track of the size of the game window and the settings for the game. 
     /// </para>
     /// </summary>
     public class Constants
