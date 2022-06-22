@@ -36,7 +36,7 @@ namespace Unit05_cycle.Game.Scripting
             videoService.DrawActors(segments1);
             videoService.DrawActors(segments2);
             videoService.DrawActor(onescore);
-            //videoService.DrawActor(twoscore);
+            videoService.DrawActor(twoscore);
             videoService.DrawActors(messages);
             videoService.FlushBuffer();
         }

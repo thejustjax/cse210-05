@@ -22,7 +22,7 @@ namespace Unit05_cycle.Game.Casting{
         public void AddPointsTwo(int points)
         {
             this.points += points;
-            SetText($"Player One: {this.points}");
+            SetText($"Player Two: {this.points}");
         }
     }
 }
