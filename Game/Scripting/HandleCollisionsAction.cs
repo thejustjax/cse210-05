@@ -48,6 +48,7 @@ namespace Unit05_cycle.Game.Scripting
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
             OneScore onescore = (OneScore)cast.GetFirstActor("onescore");
             TwoScore twoscore = (TwoScore)cast.GetFirstActor("twoscore");
+            twoscore.SetPosition(new Point(800, 0));
             counter = counter +1;
             if (counter % 15 == 0){
                 cycleone.GrowTail(1);
