@@ -103,7 +103,7 @@ namespace Unit05_cycle.Game.Scripting
                 CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
                 List<Actor> segments1 = cycleone.GetSegments();
                 CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-                List<Actor> segments2 = cycleone.GetSegments();
+                List<Actor> segments2 = cycletwo.GetSegments();
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
