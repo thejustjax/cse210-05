@@ -17,6 +17,9 @@ namespace Unit05_cycle.Game.Scripting
     public class HandleCollisionsAction : Action
     {
         private bool isGameOver = false;
+
+        private bool CycleOneLoose = false;
+        private bool CycleTwoLoose = false;
         private int counter = 0;
         /// <summary>
         /// Constructs a new instance of HandleCollisionsAction.
@@ -76,20 +79,24 @@ namespace Unit05_cycle.Game.Scripting
                     if (segment1.GetPosition().Equals(head2.GetPosition()))
                     {
                         isGameOver = true;
+                        CycleTwoLoose = true;
                     }
                     else if(segment2.GetPosition().Equals(head1.GetPosition()))
                     {
-                        isGameOver = true;   
+                        isGameOver = true; 
+                        CycleOneLoose = true;  
                     }
 
                     else if(segment2.GetPosition().Equals(head2.GetPosition()))
                     {
                         isGameOver = true;
+                        CycleTwoLoose = true;
                     }
 
                 if (segment1.GetPosition().Equals(head1.GetPosition()))
                 {
                     isGameOver = true;
+                    CycleOneLoose = true;
                 }
 
             }
@@ -120,15 +127,21 @@ namespace Unit05_cycle.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // make everything white
-                foreach (Actor segment in segments1)
+                if (CycleOneLoose == true)
                 {
-                    segment.SetColor(Constants.WHITE);
+                    foreach (Actor segment in segments1)
+                    {
+                        segment.SetColor(Constants.WHITE);
+                    }
                 }
-                foreach (Actor segment in segments2)
+                if(CycleTwoLoose == true)
                 {
-                    segment.SetColor(Constants.WHITE);
-                }
+                    foreach (Actor segment in segments2)
+                    {
+                        segment.SetColor(Constants.WHITE);
+                    }
                 //food.SetColor(Constants.WHITE);
+                }
             }
         }
     }
