@@ -40,7 +40,6 @@ namespace Unit05_cycle.Game.Scripting
         /// Updates the score nd moves the food if the snake collides with it.
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
-<<<<<<< HEAD
         private void HandleGrowth(Cast cast)
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
