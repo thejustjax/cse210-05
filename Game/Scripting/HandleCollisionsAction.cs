@@ -44,8 +44,8 @@ namespace Unit05_cycle.Game.Scripting
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
-            cycleone.GrowTail(1/15);
-            cycletwo.GrowTail(1/15);
+            cycleone.GrowTail(1);
+            cycletwo.GrowTail(1);
         }
 
         /// <summary>
