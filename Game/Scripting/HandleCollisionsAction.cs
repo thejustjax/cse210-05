@@ -115,28 +115,50 @@ namespace Unit05_cycle.Game.Scripting
                 List<Actor> segments2 = cycletwo.GetSegments();
 
                 // create a "game over" message
-                int x = Constants.MAX_X / 2;
-                int y = Constants.MAX_Y / 2;
-                Point position = new Point(x, y);
+                //int x = Constants.MAX_X / 2;
+                //int y = Constants.MAX_Y / 2;
+                //Point position = new Point(x, y);
 
-                Actor message = new Actor();
-                message.SetText("Game Over!");
-                message.SetPosition(position);
-                cast.AddActor("messages", message);
+                //Actor message = new Actor();
+                //message.SetText("Game Over!");
+                //message.SetPosition(position);
+                //cast.AddActor("messages", message);
 
                 // make everything white
                 if(CycleOneLoose == true)
                 {
                     foreach (Actor segment in segments1)
                     {
+
+                        int x = Constants.MAX_X / 2;
+                        int y = Constants.MAX_Y / 2;
+                        Point position = new Point(x, y);
+
+                        Actor message = new Actor();
+                        message.SetText("Player Two Wins!");
+                        message.SetPosition(position);
+                        cast.AddActor("messages", message);
+
                         segment.SetColor(Constants.WHITE);
+                        message.SetColor(Constants.BLUE);
                     }
                 }
                 if (CycleTwoLoose == true)
                 {
                     foreach (Actor segment in segments2)
                     {
+
+                        int x = Constants.MAX_X / 2;
+                        int y = Constants.MAX_Y / 2;
+                        Point position = new Point(x, y);
+
+                        Actor message = new Actor();
+                        message.SetText("Player One Wins!");
+                        message.SetPosition(position);
+                        cast.AddActor("messages", message);
+
                         segment.SetColor(Constants.WHITE);
+                        message.SetColor(Constants.RED);
                     }
                 }
             
