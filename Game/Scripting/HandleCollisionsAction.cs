@@ -124,7 +124,7 @@ namespace Unit05_cycle.Game.Scripting
                 //message.SetPosition(position);
                 //cast.AddActor("messages", message);
 
-                // make everything white
+                // decide the color of the game over screen and the losing cycle
                 if(CycleOneLoose == true)
                 {
                     foreach (Actor segment in segments1)
